@@ -1,0 +1,10 @@
+dx=0.000000001
+1 proces: 2.67 s
+2 procesy: 1.30 s
+4 procesy: 0.73 s
+8 procesow: 0.74 s
+dx=0.0000000001
+1 proces: 26.50 s
+2 procesy: 13.14 s
+4 procesy: 7.35 s
+8 procesow: 7.07 s

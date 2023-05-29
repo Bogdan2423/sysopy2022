@@ -1,0 +1,8 @@
+1. Ignore: Ustawienie ignorowania sygnalu zostalo zachowane w procesie wywolanym
+zarowno przez fork() jak i exec().
+2. Handler: Handler sygnalu zostal wywolany w procesie stworzonym przez funkcje fork().
+3. Mask: Maska zostala zachowana w procesach stworzonych przez fork() i exec().
+4. Pending: Sygnal wyslany w przodku nie jest widoczny w procesie potomnym.
+
+Wnioski: Jak widac, ustawienia obslugi sygnalow oraz maski są zachowywane w procesach potomnych,
+jednak sygnaly oczekujace w procesie przodka nie sa widziane przez procesy potomne.

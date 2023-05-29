@@ -1,0 +1,10 @@
+składnik1 = cat /etc/passwd | wc -l
+składnik2 = ls
+składnik3 = grep 4
+składnik4 = grep 'main'
+składnik5 = wc -w
+
+składnik1
+składnik2
+składnik1 | składnik3
+składnik2 | składnik5

@@ -1,0 +1,42 @@
+Poniżej zapisałem czasy wykonywania testów dla różnych typów kompilacji (zapisałem tylko czas zwracany przez clock(), ponieważ times() zwracało 0)
+
+test1, test2-alokacja tablicy, zliczenie kilku plików, zapisanie wyników w pamięci, usunięcie wyników z pamięci
+test3-na przemian kilkakrotne dodawanie i usuwanie bloków pamięci
+test4-wielokrotne zliczenie pliku
+
+biblioteka statyczna:
+test1: 0.001287s
+test2: 0.001397s
+test3: 0.000583s
+test4: 0.005505s
+biblioteka współdzielona:
+test1: 0.001407s
+test2: 0.001433s
+test3: 0.000677s
+test4: 0.005302s
+biblioteka ładowana dynamicznie:
+test1: 0.001179s
+test2: 0.001560s
+test3: 0.000649s
+test4: 0.004488s
+
+kompilacja -O3:
+test1: 0.000771s
+test2: 0.001082s
+test3: 0.000550s
+test4: 0.003528s
+kompilacja -O0:
+test1: 0.000820s
+test2: 0.000800s
+test3: 0.000381s
+test4: 0.003465s
+kompilacja -Os:
+test1: 0.000927s
+test2: 0.001331s
+test3: 0.000360s
+test4: 0.003714s
+
+Czasy działania programów są niskie, przez co nie widać dużych różnic między różnymi typami kompilacji.
+Najbardziej zauważalną różnicę widać w kompilacji -Os - program działał dłużej w 3/4 testach.
+Różnicę widać też dla biblioteki ładowanej dynamicznie, która w 4. teście działała zauważalnie szybciej od pozostałych 2 bibliotek,
+jednak dla pozostałych testów wynik jest przybliżony.

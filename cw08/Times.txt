@@ -1,0 +1,98 @@
+Poniżej zamieszczone są czasy w mikrosekundach dla poszczególnych wątków oraz całego programu.
+Można zauważyć, że tryb "block" działa znacznie szybciej dla dużej liczby wątków niż tryb "numbers". Jest to spowodowane tym, że w trybie numbers każdy wątek musi przejść przez całą tablicę.
+
+Obraz 640 x 480, tryb numbers:
+-1 watek
+Thread 0 time: 3154.687000
+Total time: 3818.952 microseconds
+
+-2 watki
+Thread 0 time: 2657.969000
+Thread 1 time: 3078.905000
+Total time: 3689.672 microseconds
+
+-4 watki
+Thread 0 time: 2218.803000
+Thread 3 time: 2416.176000
+Thread 1 time: 2599.232000
+Thread 2 time: 2902.904000
+Total time: 3422.596 microseconds
+
+-8 watkow
+Thread 6 time: 1516.684000
+Thread 7 time: 2004.388000
+Thread 0 time: 2364.422000
+Thread 2 time: 2213.424000
+Thread 3 time: 2526.804000
+Thread 4 time: 3049.011000
+Thread 5 time: 1577.166000
+Thread 1 time: 2130.383000
+Total time: 4780.179 microseconds
+
+-16 watkow
+Thread 5 time: 1346.758000
+Thread 4 time: 2112.433000
+Thread 0 time: 2390.542000
+Thread 6 time: 2321.819000
+Thread 2 time: 2400.670000
+Thread 7 time: 2428.048000
+Thread 9 time: 1522.131000
+Thread 1 time: 1197.856000
+Thread 10 time: 2264.339000
+Thread 8 time: 2288.434000
+Thread 3 time: 2141.347000
+Thread 14 time: 3205.316000
+Thread 12 time: 2609.427000
+Thread 13 time: 1889.638000
+Thread 11 time: 1901.301000
+Thread 15 time: 4348.905000
+Total time: 7352.937 microseconds
+
+Obraz 640 x 480, tryb block:
+
+-1 watek
+Thread 0 time: 3004.959000
+Total time: 3681.101 microseconds
+
+-2 watki
+Thread 0 time: 1543.441000
+Thread 1 time: 1513.269000
+Total time: 2145.829 microseconds
+
+-4 watki
+Thread 1 time: 678.726000
+Thread 2 time: 871.140000
+Thread 3 time: 828.956000
+Thread 0 time: 899.916000
+Total time: 1508.380 microseconds
+
+-8 watkow
+Thread 6 time: 239.628000
+Thread 4 time: 430.087000
+Thread 5 time: 241.514000
+Thread 7 time: 361.642000
+Thread 0 time: 413.116000
+Thread 2 time: 399.287000
+Thread 3 time: 366.531000
+Thread 1 time: 573.613000
+Total time: 1579.339 microseconds
+
+-16 watkow
+Thread 0 time: 242.422000
+Thread 7 time: 188.085000
+Thread 9 time: 218.815000
+Thread 6 time: 130.954000
+Thread 2 time: 218.955000
+Thread 8 time: 200.447000
+Thread 5 time: 119.919000
+Thread 11 time: 420.310000
+Thread 10 time: 187.945000
+Thread 1 time: 270.429000
+Thread 3 time: 316.105000
+Thread 13 time: 213.019000
+Thread 12 time: 182.148000
+Thread 15 time: 233.971000
+Thread 4 time: 225.939000
+Thread 14 time: 199.399000
+Total time: 1474.645 microseconds
+

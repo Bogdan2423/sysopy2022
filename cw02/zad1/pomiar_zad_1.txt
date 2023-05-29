@@ -1,0 +1,2 @@
+funkcje biblioteki C: 0.001216 s
+funkcje systemowe: 0.097414 s
